@@ -1,0 +1,32 @@
+.header-text {
+	float: left;
+	margin-left: 10px;
+	padding-top: 20px;
+}
+
+.header-text p {
+	color: #e66b67;
+	font-size: 18px;
+}
+
+.header-content {
+	float: left;
+	margin: 0 auto;
+}
+
+.header-content p {
+	color: #5d5d5d;
+	
+}
+
+.header-des {
+	float: left;
+	background-position: bottom;
+	margin: 0 auto;
+}
+
+.header-des p {
+	color: #5d5d5d;
+	text-decoration: none;
+	vertical-align: bottom;
+}
