@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="../css/bootstrap-responsive.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<title>Bar Chart</title>
+		<script src="../Chart.js"></script>
+	</head>
+	<body>
+		<div class="header-text">
+			<div class="container">
+				<p>THE TEST RESULTS 7/18</p>
+			</div>
+		</div>
+		<div class="header-content">
+			<div class="container">
+				<div class="col-md-4"><p>COMPARE THE OBJECTIVES WIHT TEST RESULTS</p></div>
+				<div class="col-md-2"><p><img src="../img/circle1.png">SEVERE LOSS</p></div>
+				<div class="col-md-6"><p><img src="../img/circle2.png">VERY GOOD</p></div>
+			</div>
+		</div>
+		<div class="header-des">
+			<div class="container">
+				<div class="col-md-3"><p><img src="../img/Rectangle.png">MY HEARING SITUATION</p></div>
+				<div class="col-md-9"><p><img src="../img/line.png">POSSIBLE ACHIEVEMENT</p></div>
+			</div>
+		</div>
+		<div style="width: 65%">
+			<canvas id="canvas" height="450" width="600"></canvas>
+		</div>
+
+
+	<script>
+	var randomScalingFactor = function(){ return Math.round(Math.random()*10)};
+
+	var barChartData = {
+		labels : ["","","","","",""],
+		datasets : [
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,0.8)",
+				highlightFill: "rgba(220,220,220,0.75)",
+				highlightStroke: "rgba(220,220,220,1)",
+				data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+			},
+			{
+				fillColor : "rgba(151,187,205,0.5)",
+				strokeColor : "rgba(151,187,205,0.8)",
+				highlightFill : "rgba(151,187,205,0.75)",
+				highlightStroke : "rgba(151,187,205,1)",
+				data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+			}
+		]
+
+	}
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myBar = new Chart(ctx).Bar(barChartData, {
+			responsive : true
+		});
+	}
+
+	</script>
+	</body>
+</html>
